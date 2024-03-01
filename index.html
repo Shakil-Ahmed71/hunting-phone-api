@@ -14,7 +14,7 @@
 </head>
 <body>
     <header>
-         <h2 class="text-3xl">My Name Is Shakil</h2>
+         <h2 class="text-3xl">Hunting Phone API</h2>
 
     </header>
     <main class="container mx-auto mt-8">
@@ -28,16 +28,43 @@
 
         <!-- result section -->
         <section >
+
+            <!-- toggole spineer -->
+            <div id="toggole-lodding" class="text-center my-52 hidden" >
+                <span class="loading loading-spinner loading-lg"></span>
+            </div>
+
             <div id="phone-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
             </div>
 
             <!-- show all button -->
-            <div id="show-all-container" class="hidden">
-                <button class="btn btn-success">Success</button>
+            <div id="show-all-container" class="hidden text-center my-8">
+                <button onclick="handleShowAll()" class="btn btn-success">Success</button>
             </div>
         </section>
 
+        <!-- Open the modal using ID.showModal() method -->
+       
+        <dialog id="show_modal" class="modal modal-bottom sm:modal-middle">
+        <div class="modal-box bg-gray-100">
+            <h3 id="show-detail-phone-name" class="font-bold text-lg">Hello!</h3>
+            <div id="show-detail-container">
+
+            </div>
+            <div class="modal-action">
+            <form method="dialog">
+                <!-- if there is a button in form, it will close the modal -->
+                <button class="btn">Close</button>
+            </form>
+            </div>
+        </div>
+        </dialog>
+
     </main>
+    
+
+
+
     <footer>
 
     </footer>
